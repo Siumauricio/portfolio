@@ -1,13 +1,13 @@
 import {Text, Spacer, Avatar, Card, Button, Link} from '@nextui-org/react';
 import Image from 'next/image';
-import {ChevronIcon} from '../icons/chevron-icon';
-import {Box} from '../styles/box';
-import {Flex} from '../styles/flex';
+import {ChevronIcon} from '../../icons/chevron-icon';
+import {Box} from '../../styles/box';
+import {Flex} from '../../styles/flex';
 import img from '../../public/1.png';
-import {GithubIcon} from '../icons/github-icon';
-import {LinkedinIcon} from '../icons/linkedin-icon';
+import {GithubIcon} from '../../icons/github-icon';
+import {LinkedinIcon} from '../../icons/linkedin-icon';
 
-export const Content = () => (
+export const Home = () => (
    <Box css={{'px': '$12', 'mt': '$8', '@xsMax': {px: '$10'}}}>
       {/* <Image src={img.src} width={300} height={200} /> */}
       <Card variant="flat" css={{marginBottom: '$10'}}>
