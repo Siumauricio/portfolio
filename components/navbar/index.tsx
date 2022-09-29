@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Navbar, Button, Link, Text, Dropdown, Avatar} from '@nextui-org/react';
 import {LogoIcon} from '../icons/logo-icon';
 import {Toggle} from './toggle';
-
+import {useRouter} from 'next/router';
+import NextLink from 'next/link';
 export const NavbarWrapper = () => {
+   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+   const [activeMenu, setActiveMenu] = useState();
+   const router = useRouter();
    const collapseItems = ['About', 'Projects', 'Blog'];
+
+   const HandleSideMenu = (flag = false, index = undefined) => {
+      setActiveMenu(index);
+      flag && setIsSideMenuOpen(!isSideMenuOpen);
+      isSideMenuOpen && setIsSideMenuOpen(false);
+   };
    return (
       <Navbar
          variant="floating"
@@ -14,11 +24,27 @@ export const NavbarWrapper = () => {
 
             '& .nextui-navbar-container': {
                'mt': '$0',
+               // 'mx': '$6',
                '--nextui--navbarContainerMaxWidth': '800px',
+            },
+            '@xsMax': {
+               '& .nextui-navbar-container': {
+                  mx: '$0',
+                  borderTopRightRadius: '0',
+                  borderTopLeftRadius: '0',
+                  ...(isSideMenuOpen && {
+                     borderBottomRightRadius: '0',
+                     borderBottomLeftRadius: '0',
+                  }),
+               },
             },
          }}
       >
-         <Navbar.Toggle showIn="xs" />
+         <Navbar.Toggle
+            showIn="xs"
+            isSelected={isSideMenuOpen}
+            onChange={() => HandleSideMenu(true, activeMenu)}
+         />
          <Navbar.Brand
             css={{
                'cursor': 'pointer',
@@ -42,9 +68,22 @@ export const NavbarWrapper = () => {
             hideIn="xs"
             variant="highlight"
          >
-            <Navbar.Link href="#">About</Navbar.Link>
-            <Navbar.Link href="#">Projects</Navbar.Link>
-            <Navbar.Link href="#">Blog</Navbar.Link>
+            <NextLink href="/">
+               <Navbar.Link isActive={router.pathname === '/'}>
+                  About
+               </Navbar.Link>
+            </NextLink>
+            <NextLink href="/projects">
+               <Navbar.Link href="#" isActive={router.pathname === '/projects'}>
+                  Projects
+               </Navbar.Link>
+            </NextLink>
+
+            <NextLink href="/blog">
+               <Navbar.Link href="#" isActive={router.pathname === '/blog'}>
+                  Blog
+               </Navbar.Link>
+            </NextLink>
          </Navbar.Content>
          <Navbar.Content
             css={{
@@ -56,18 +95,30 @@ export const NavbarWrapper = () => {
          >
             <Toggle />
          </Navbar.Content>
-         <Navbar.Collapse>
+         <Navbar.Collapse isOpen={isSideMenuOpen}>
             {collapseItems.map((item, index) => (
-               <Navbar.CollapseItem key={item} isActive={index === 2}>
-                  <Link
-                     color="inherit"
-                     css={{
-                        minWidth: '100%',
-                     }}
-                     href="#"
+               <Navbar.CollapseItem
+                  key={item}
+                  isActive={
+                     (item === 'About' && router.pathname === '/') ||
+                     (item === 'Projects' && router.pathname === '/projects') ||
+                     (item === 'Blog' && router.pathname === '/blog')
+                  }
+               >
+                  <NextLink
+                     href={(item === 'About' && '/') || item.toLowerCase()}
                   >
-                     {item}
-                  </Link>
+                     <Link
+                        onClick={() => HandleSideMenu()}
+                        color="inherit"
+                        css={{
+                           minWidth: '100%',
+                        }}
+                        href="#"
+                     >
+                        {item}
+                     </Link>
+                  </NextLink>
                </Navbar.CollapseItem>
             ))}
          </Navbar.Collapse>
