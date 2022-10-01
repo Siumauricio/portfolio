@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Navbar, Link, Text} from '@nextui-org/react';
 import {LogoIcon} from '../icons/logo-icon';
 import {Toggle} from './toggle';
@@ -10,6 +10,12 @@ export const NavbarWrapper = () => {
    const [activeMenu, setActiveMenu] = useState();
    const router = useRouter();
    const collapseItems = ['About', 'Projects', 'Blog'];
+
+   useEffect(() => {
+      // @ts-ignore
+      document.body.style.overflow = null;
+      isSideMenuOpen && (document.body.style.overflow = 'hidden');
+   }, [isSideMenuOpen]);
 
    const HandleSideMenu = (flag = false, index = undefined) => {
       setActiveMenu(index);
