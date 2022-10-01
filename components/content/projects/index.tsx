@@ -44,12 +44,14 @@ export const Projects = () => {
                            flex: 'auto',
                         }}
                      >
-                        <Card.Image
+                        <Image
                            src={project.img}
+                           width={302}
+                           layout="responsive"
+                           alt={project.alt}
                            objectFit="cover"
-                           width="100%"
                            height={140}
-                           alt={project.title}
+                           quality={100}
                         />
                      </Card.Body>
                      <Card.Footer css={{justifyItems: 'flex-start'}}>

@@ -2,7 +2,7 @@ export const projects = [
    {
       title: 'E-commerce Website',
       description: `A fully website for a local business that can sells products online with a payment system and a dashboard for the admin to manage the products and orders.`,
-      img: 'E-Commerce.png',
+      img: '/E-Commerce.png',
       href: 'https://market-app-next-ts.vercel.app/',
       alt: 'Projects',
       delay: 0.1,
@@ -10,7 +10,7 @@ export const projects = [
    {
       title: 'Complete Design System',
       description: `A complete design system for a website that can be used for any website with a dark and light theme and a lot of components premade.`,
-      img: 'Design-System.png',
+      img: '/Design-System.png',
       href: 'https://market-app-next-ts.vercel.app/',
       alt: 'Projects',
       delay: 0.2,
@@ -18,7 +18,7 @@ export const projects = [
    {
       title: 'Dashboard Template',
       description: `A dashboard template for a website that can be used for any website that needs a dashboard.`,
-      img: 'Dashboard.png',
+      img: '/Dashboard.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
@@ -26,7 +26,7 @@ export const projects = [
    {
       title: 'Landing Page Template',
       description: `Landing page for any SaaS company.`,
-      img: 'Landing.png',
+      img: '/Landing.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
@@ -34,7 +34,7 @@ export const projects = [
    {
       title: 'Crow Founding System with smart contracts',
       description: `Campagin system for a crow founding system using blockchain system.`,
-      img: 'Funding.png',
+      img: '/Funding.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
@@ -42,7 +42,7 @@ export const projects = [
    {
       title: 'Lottery Random System with smart contracts',
       description: `Lottery system using blockchain system, that takes the money from the players and gives it to a random player.`,
-      img: 'Lottery.png',
+      img: '/Lottery.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
@@ -50,7 +50,7 @@ export const projects = [
    {
       title: 'Portfolio Website',
       description: `My portfolio website that you are currently on.`,
-      img: 'Portfolio-2.png',
+      img: '/Portfolio-2.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
@@ -58,7 +58,7 @@ export const projects = [
    {
       title: 'Portfolio Template',
       description: `Simple and minimalist portfolio with dark mode support and more than 25 themes.`,
-      img: 'Portfolio.png',
+      img: '/Portfolio.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
@@ -66,7 +66,7 @@ export const projects = [
    {
       title: 'Maze Rat Game',
       description: `Maze rat solver game using the A*, Prism algorithm to find the shortest path between the rat and the cheese.`,
-      img: 'Maze-Rat.png',
+      img: '/Maze-Rat.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
@@ -74,7 +74,7 @@ export const projects = [
    {
       title: 'Visual Generator App',
       description: `Visual editor with a drag and drop system that can generate python code.`,
-      img: 'Drawflow-Sentences.png',
+      img: '/Drawflow-Sentences.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
@@ -83,7 +83,7 @@ export const projects = [
       title: 'Gif App',
       description:
          'A gif app that can search for gifs and save them in a favorites section.',
-      img: 'Gif-App.png',
+      img: '/Gif-App.png',
       href: '',
       alt: 'Projects 2',
       delay: 0.3,
@@ -91,7 +91,7 @@ export const projects = [
    {
       title: 'Heroes App',
       description: `A website that can search for heroes and see their information.`,
-      img: 'Heroes-App.png',
+      img: '/Heroes-App.png',
       href: '',
       alt: 'Projects 2',
       delay: 0.3,
@@ -100,7 +100,7 @@ export const projects = [
       title: 'Tailwind Auto Applier Prefixer',
       description:
          'Web application to apply any prefix to existing file what uses Tailwind CSS.',
-      img: 'Prefixer.png',
+      img: '/Prefixer.png',
       href: '',
       alt: 'Projects 2',
       delay: 0.3,
