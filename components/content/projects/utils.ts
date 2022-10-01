@@ -2,7 +2,7 @@ export const projects = [
    {
       title: 'E-commerce Website',
       description: `A fully website for a local business that can sells products online with a payment system and a dashboard for the admin to manage the products and orders.`,
-      img: 'E-commerce.png',
+      img: 'E-Commerce.png',
       href: 'https://market-app-next-ts.vercel.app/',
       alt: 'Projects',
       delay: 0.1,
@@ -43,6 +43,14 @@ export const projects = [
       title: 'Lottery Random System with smart contracts',
       description: `Lottery system using blockchain system, that takes the money from the players and gives it to a random player.`,
       img: 'Lottery.png',
+      href: 'https://maze-app-two.vercel.app/',
+      alt: 'Projects 1',
+      delay: 0.3,
+   },
+   {
+      title: 'Portfolio Website',
+      description: `My portfolio website that you are currently on.`,
+      img: 'Portfolio-2.png',
       href: 'https://maze-app-two.vercel.app/',
       alt: 'Projects 1',
       delay: 0.3,
