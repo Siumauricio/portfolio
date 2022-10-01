@@ -1,5 +1,6 @@
-import {Card, Col, Link, Row, Text} from '@nextui-org/react';
+import {Card, Col, Row, Text} from '@nextui-org/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import {SectionAnimation} from '../../animations/section';
 import {Box} from '../../styles/box';
@@ -31,45 +32,51 @@ export const Projects = () => {
                      backgroundColor: 'transparent',
                   }}
                >
-                  <Card
-                     isPressable
-                     css={{
-                        height: '100%',
-                        display: 'block',
-                     }}
-                  >
-                     <Card.Body
+                  <Link href={project.href}>
+                     <Card
+                        isPressable
                         css={{
-                           p: 0,
-                           flex: 'auto',
+                           height: '100%',
+                           display: 'block',
                         }}
                      >
-                        <Image
-                           src={project.img}
-                           width={302}
-                           layout="responsive"
-                           alt={project.alt}
-                           objectFit="cover"
-                           height={140}
-                           quality={100}
-                        />
-                     </Card.Body>
-                     <Card.Footer css={{justifyItems: 'flex-start'}}>
-                        <Row wrap="wrap" justify="space-between" align="center">
-                           <Text b>{project.title}</Text>
-                           <Text
-                              css={{
-                                 color: '$accents7',
-                                 fontWeight: '$semibold',
-                                 fontSize: '$sm',
-                                 fontFamily: 'inherit',
-                              }}
+                        <Card.Body
+                           css={{
+                              p: 0,
+                              flex: 'auto',
+                           }}
+                        >
+                           <Image
+                              src={project.img}
+                              width={302}
+                              layout="responsive"
+                              alt={project.alt}
+                              objectFit="cover"
+                              height={140}
+                              quality={100}
+                           />
+                        </Card.Body>
+                        <Card.Footer css={{justifyItems: 'flex-start'}}>
+                           <Row
+                              wrap="wrap"
+                              justify="space-between"
+                              align="center"
                            >
-                              {project.description}
-                           </Text>
-                        </Row>
-                     </Card.Footer>
-                  </Card>
+                              <Text b>{project.title}</Text>
+                              <Text
+                                 css={{
+                                    color: '$accents7',
+                                    fontWeight: '$semibold',
+                                    fontSize: '$sm',
+                                    fontFamily: 'inherit',
+                                 }}
+                              >
+                                 {project.description}
+                              </Text>
+                           </Row>
+                        </Card.Footer>
+                     </Card>
+                  </Link>
                </SectionAnimation>
             ))}
          </GridContainer>
