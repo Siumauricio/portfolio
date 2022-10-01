@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {Navbar, Button, Link, Text, Dropdown, Avatar} from '@nextui-org/react';
+import {Navbar, Link, Text} from '@nextui-org/react';
 import {LogoIcon} from '../icons/logo-icon';
 import {Toggle} from './toggle';
 import {useRouter} from 'next/router';
 import NextLink from 'next/link';
+
 export const NavbarWrapper = () => {
    const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
    const [activeMenu, setActiveMenu] = useState();
@@ -45,23 +46,25 @@ export const NavbarWrapper = () => {
             isSelected={isSideMenuOpen}
             onChange={() => HandleSideMenu(true, activeMenu)}
          />
-         <Navbar.Brand
-            css={{
-               'cursor': 'pointer',
-               'transition': 'all 0.1s ease-in-out',
-               '&:hover': {
-                  'color': '$accents8',
-                  '& svg': {
-                     transform: 'rotate(20deg)',
+         <NextLink href="/">
+            <Navbar.Brand
+               css={{
+                  'cursor': 'pointer',
+                  'transition': 'all 0.1s ease-in-out',
+                  '&:hover': {
+                     'color': '$accents8',
+                     '& svg': {
+                        transform: 'rotate(20deg)',
+                     },
                   },
-               },
-            }}
-         >
-            <LogoIcon />
-            <Text b color="inherit">
-               Mauricio Siu
-            </Text>
-         </Navbar.Brand>
+               }}
+            >
+               <LogoIcon />
+               <Text b color="inherit">
+                  Mauricio Siu
+               </Text>
+            </Navbar.Brand>
+         </NextLink>
          <Navbar.Content
             enableCursorHighlight
             activeColor="default"
@@ -125,64 +128,3 @@ export const NavbarWrapper = () => {
       </Navbar>
    );
 };
-//   <Navbar
-//          isBordered
-//          variant="sticky"
-//          css={{
-//             '& .nextui-navbar-container': {
-//                borderBottom: 'none',
-//             },
-//          }}
-//       >
-//          <Navbar.Brand
-// css={{
-//    'cursor': 'pointer',
-//    'transition': 'all 0.1s ease-in-out',
-//    '&:hover': {
-//       'color': '$accents8',
-//       '& svg': {
-//          transform: 'rotate(20deg)',
-//       },
-//    },
-//             }}
-//          >
-//             <Navbar.Toggle aria-label="toggle navigation" showIn={'sm'} />
-//             <LogoIcon />
-//             <Text b color="inherit">
-//                Mauricio Siu
-//             </Text>
-//          </Navbar.Brand>
-//          <Navbar.Content
-//             enableCursorHighlight
-//             hideIn="xs"
-//             variant="default"
-//             css={{
-//                pr: '$10',
-//             }}
-//          >
-//             <Navbar.Link isActive href="#">
-//                Works
-//             </Navbar.Link>
-//             <Navbar.Link href="#">Posts</Navbar.Link>
-//          </Navbar.Content>
-//          <Navbar.Content>
-//             <Navbar.Item>
-//                <Toggle />
-//             </Navbar.Item>
-//          </Navbar.Content>
-//          <Navbar.Collapse>
-//             {collapseItems.map((item, index) => (
-//                <Navbar.CollapseItem key={item}>
-//                   <Link
-//                      color="inherit"
-//                      css={{
-//                         minWidth: '100%',
-//                      }}
-//                      href="#"
-//                   >
-//                      {item}
-//                   </Link>
-//                </Navbar.CollapseItem>
-//             ))}
-//          </Navbar.Collapse>
-//       </Navbar>
