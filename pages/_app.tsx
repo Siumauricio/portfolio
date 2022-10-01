@@ -2,7 +2,8 @@ import '../styles/globals.css';
 import type {AppProps} from 'next/app';
 import {createTheme, NextUIProvider} from '@nextui-org/react';
 import {ThemeProvider as NextThemesProvider} from 'next-themes';
-import {Layout} from '../components/layout';
+import {AnimatePresence} from 'framer-motion';
+import {MainLayout} from '../components/layout/main-layout';
 
 const lightTheme = createTheme({
    type: 'light',
@@ -18,6 +19,10 @@ const darkTheme = createTheme({
    },
 });
 
+if (typeof window !== 'undefined') {
+   window.history.scrollRestoration = 'manual';
+}
+
 function MyApp({Component, pageProps}: AppProps) {
    return (
       <NextThemesProvider
@@ -29,9 +34,19 @@ function MyApp({Component, pageProps}: AppProps) {
          }}
       >
          <NextUIProvider>
-            <Layout>
-               <Component {...pageProps} />
-            </Layout>
+            <AnimatePresence
+               exitBeforeEnter
+               initial={true}
+               onExitComplete={() => {
+                  if (typeof window !== 'undefined') {
+                     window.scrollTo({top: 0});
+                  }
+               }}
+            >
+               <MainLayout>
+                  <Component {...pageProps} />
+               </MainLayout>
+            </AnimatePresence>
          </NextUIProvider>
       </NextThemesProvider>
    );

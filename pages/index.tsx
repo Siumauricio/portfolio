@@ -1,9 +1,13 @@
 import type {NextPage} from 'next';
-import {Layout} from '../components/layout';
 import {Home} from '../components/content/home';
+import {ArticleLayout} from '../components/layout/article-layout';
 
 const index: NextPage = () => {
-   return <Home />;
+   return (
+      <ArticleLayout>
+         <Home />
+      </ArticleLayout>
+   );
 };
 
 export default index;
