@@ -4,6 +4,8 @@ export const projects = [
       description: `A fully website for a local business that can sells products online with a payment system and a dashboard for the admin to manage the products and orders.`,
       img: '/E-Commerce.png',
       href: '/projects/ecommerce',
+      preview: 'https://ecommerce-website-psi.vercel.app/',
+      github: '',
       alt: 'Projects',
       platform: 'Web',
       stack: 'NextJS, Redux Toolkit, Typescript, TailwindCSS, Cloudinary.',
