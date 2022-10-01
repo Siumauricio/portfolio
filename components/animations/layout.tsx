@@ -19,7 +19,11 @@ export const LayoutAnimation = ({children}: Props) => {
          exit="exit"
          variants={variants}
          transition={{duration: 0.4, type: 'easeInOut'}}
-         style={{position: 'relative', marginTop: '1rem'}}
+         style={{
+            position: 'relative',
+            marginTop: '1rem',
+            backgroundColor: 'inherit',
+         }}
       >
          {children}
       </motion.article>
