@@ -1,5 +1,5 @@
 import {NextPage, NextPageContext} from 'next';
-import {Badge, Link, Text} from '@nextui-org/react';
+import {Badge, Button, Link, Text} from '@nextui-org/react';
 import {useRouter} from 'next/router';
 import React, {useEffect, useState} from 'react';
 import {projects} from '../../components/content/projects/utils';
@@ -10,6 +10,8 @@ import {GetStaticProps} from 'next';
 import {ChevronIcon} from '../../components/icons/chevron-icon';
 import Image from 'next/image';
 import {Box} from '../../components/styles/box';
+import {LinkIcon} from '../../components/icons/link-icon';
+import {GithubIcon} from '../../components/icons/github-icon';
 
 type Project = typeof projects[0];
 
@@ -32,16 +34,18 @@ const Index = ({project}: Props) => {
             <Box css={{'& img': {borderRadius: '$lg'}}}>
                <Image
                   src={project.img}
-                  width={302}
-                  layout="responsive"
+                  width={640}
                   alt={project.alt}
                   objectFit="cover"
-                  height={140}
+                  height={296}
                   quality={100}
                />
             </Box>
 
-            <Flex css={{gap: '$6'}} align={'center'}>
+            <Flex
+               css={{'gap': '$6', '& path': {stroke: '$accents9'}}}
+               align={'center'}
+            >
                <NextLink href={'/projects'}>
                   <Link css={{fontSize: '$xl'}}>Projects</Link>
                </NextLink>
@@ -69,7 +73,7 @@ const Index = ({project}: Props) => {
             <Flex css={{gap: '$6'}} align={'center'}>
                <Badge
                   css={{height: 'fit-content'}}
-                  variant={'flat'}
+                  variant="bordered"
                   color={'primary'}
                   borderWeight={'normal'}
                >
@@ -80,7 +84,7 @@ const Index = ({project}: Props) => {
 
             <Flex css={{gap: '$6'}} align={'center'}>
                <Badge
-                  variant={'flat'}
+                  variant="bordered"
                   color={'primary'}
                   css={{height: 'fit-content'}}
                >
@@ -88,6 +92,26 @@ const Index = ({project}: Props) => {
                </Badge>
                <Text span>{project?.stack}</Text>
             </Flex>
+
+            <Link
+               block
+               color="primary"
+               css={{gap: '$6'}}
+               href={project.preview}
+               target="_blank"
+            >
+               Live preview <LinkIcon />
+            </Link>
+
+            <Link
+               block
+               color="primary"
+               css={{gap: '$6'}}
+               href={project.github}
+               target="_blank"
+            >
+               Github repo <GithubIcon />
+            </Link>
          </Flex>
       </ArticleLayout>
    );
