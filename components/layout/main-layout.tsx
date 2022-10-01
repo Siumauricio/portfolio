@@ -15,7 +15,6 @@ export const MainLayout = ({children}: Props) => {
          css={{
             backgroundColor: '$accents0',
             transition: 'background-color 0.2s ease',
-            height: '100vh',
          }}
       >
          <Head>
