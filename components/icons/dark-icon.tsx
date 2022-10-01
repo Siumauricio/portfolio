@@ -10,7 +10,7 @@ export const DarkIcon = () => {
          viewBox="0 0 24 24"
          css={{
             '& path': {
-               fill: '$accents6',
+               fill: '$accents8',
             },
          }}
       >
