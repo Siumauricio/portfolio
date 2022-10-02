@@ -10,13 +10,7 @@ interface Props {
 
 export const MainLayout = ({children}: Props) => {
    return (
-      <Box
-         as="main"
-         css={{
-            backgroundColor: '$accents0',
-            transition: 'background-color 0.2s ease',
-         }}
-      >
+      <Box as="main">
          <Head>
             <meta
                name="viewport"

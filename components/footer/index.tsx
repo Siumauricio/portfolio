@@ -5,7 +5,7 @@ import {Flex} from '../styles/flex';
 
 export const Footer = () => {
    return (
-      <Box css={{bg: '$accents0'}}>
+      <Box>
          <Spacer css={{pt: '$16', mt: '0 !important'}} />
          <Flex justify={'center'}>
             <Text span>© 2022 Mauricio Siu. All Rights Reserved.</Text>

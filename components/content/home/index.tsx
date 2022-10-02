@@ -15,10 +15,7 @@ export const Home = () => {
       <Box css={{'px': '$12', '@xsMax': {px: '$10'}}}>
          <Card variant="flat" css={{marginBottom: '$10'}}>
             <Card.Body css={{backgroundColor: '$accents2'}}>
-               <Text
-                  css={{fontFamily: 'inherit', textAlign: 'center'}}
-                  as={'p'}
-               >
+               <Text css={{textAlign: 'center'}} as={'p'}>
                   Hello, I&apos;m Mauricio Siu. I&apos;m a software engineer
                   based in Honduras!
                </Text>
@@ -49,7 +46,6 @@ export const Home = () => {
                   span
                   css={{
                      textIndent: '1em',
-                     fontFamily: 'inherit',
                      display: 'block',
                   }}
                >
@@ -108,10 +104,7 @@ export const Home = () => {
          <SectionAnimation delay={0.3}>
             <Box css={{mb: '$10'}}>
                <Text h3>I ❤️ </Text>
-               <Text
-                  as={'span'}
-                  css={{textIndent: '1em', fontFamily: 'inherit'}}
-               >
+               <Text as={'span'} css={{textIndent: '1em'}}>
                   I love to learn new things, I am passionate about technology
                   and I always try to learn something new every day, I love to
                   solve problems and I am always looking for new challenges.

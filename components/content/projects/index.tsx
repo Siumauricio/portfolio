@@ -68,7 +68,6 @@ export const Projects = () => {
                                     color: '$accents7',
                                     fontWeight: '$semibold',
                                     fontSize: '$sm',
-                                    fontFamily: 'inherit',
                                  }}
                               >
                                  {project.description}
@@ -83,34 +82,3 @@ export const Projects = () => {
       </Box>
    );
 };
-// <Card
-//    isHoverable
-//    isPressable
-//    key={index}
-//    css={{
-//       '& img': {borderRadius: '$md'},
-//       'maxW': '230px',
-//       'mb': '$10',
-//    }}
-// >
-//    <Image
-//       src={project.img}
-//       width={230}
-//       height={130}
-//       alt={project.alt}
-//    />
-//    <Text
-//       as={'p'}
-//       css={{
-//          textAlign: 'center',
-//          fontFamily: 'inherit',
-//          mt: '$4',
-//          fontSize: '$xl',
-//       }}
-//    >
-//       {project.title}
-//    </Text>
-//    <Text css={{fontSize: '14px', fontFamily: 'inherit'}}>
-//       {project.description}
-//    </Text>
-// </Card>
