@@ -21,7 +21,7 @@ interface Props {
 
 const Index = ({project}: Props) => {
    return (
-      <ArticleLayout title={project?.title}>
+      <ArticleLayout title={project.title}>
          <Flex
             direction={'column'}
             css={{
@@ -60,7 +60,7 @@ const Index = ({project}: Props) => {
                      'my': 0,
                   }}
                >
-                  {project?.title}
+                  {project.title}
                </Text>
             </Flex>
             <Text
@@ -69,7 +69,7 @@ const Index = ({project}: Props) => {
                   display: 'block',
                }}
             >
-               {project?.description}
+               {project.description}
             </Text>
             <Flex css={{gap: '$6'}} align={'center'}>
                <Badge
@@ -79,7 +79,7 @@ const Index = ({project}: Props) => {
                >
                   Platform
                </Badge>
-               <Text span>{project?.platform}</Text>
+               <Text span>{project.platform}</Text>
             </Flex>
 
             <Flex css={{gap: '$6'}} align={'center'}>
@@ -90,7 +90,7 @@ const Index = ({project}: Props) => {
                >
                   Stack
                </Badge>
-               <Text span>{project?.stack}</Text>
+               <Text span>{project.stack}</Text>
             </Flex>
 
             <Link
