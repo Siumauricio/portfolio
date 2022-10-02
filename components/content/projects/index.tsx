@@ -1,10 +1,9 @@
-import {Card, Col, Row, Text} from '@nextui-org/react';
+import {Card, Row, Text} from '@nextui-org/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import {SectionAnimation} from '../../animations/section';
 import {Box} from '../../styles/box';
-import {Flex} from '../../styles/flex';
 import {GridContainer} from '../../styles/grid';
 import {projects} from './utils';
 
@@ -65,6 +64,7 @@ export const Projects = () => {
                               <Text b>{project.title}</Text>
                               <Text
                                  css={{
+                                    fontFamily: 'inherit',
                                     color: '$accents7',
                                     fontWeight: '$semibold',
                                     fontSize: '$sm',

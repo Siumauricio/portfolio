@@ -15,7 +15,10 @@ export const Home = () => {
       <Box css={{'px': '$12', '@xsMax': {px: '$10'}}}>
          <Card variant="flat" css={{marginBottom: '$10'}}>
             <Card.Body css={{backgroundColor: '$accents2'}}>
-               <Text css={{textAlign: 'center'}} as={'p'}>
+               <Text
+                  css={{fontFamily: 'inherit', textAlign: 'center'}}
+                  as={'p'}
+               >
                   Hello, I&apos;m Mauricio Siu. I&apos;m a software engineer
                   based in Honduras!
                </Text>

@@ -1,0 +1,8 @@
+html,
+body {
+   padding: 0;
+   margin: 0;
+   font-family: 'Inter', sans-serif;
+   background-color: var(--nextui-colors-accents0);
+   /* transition: background-color 0.2s ease; */
+}
