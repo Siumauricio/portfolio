@@ -83,7 +83,10 @@ export const NavbarWrapper = () => {
                </Navbar.Link>
             </NextLink>
             <NextLink href="/projects">
-               <Navbar.Link href="#" isActive={router.pathname === '/projects'}>
+               <Navbar.Link
+                  href="#"
+                  isActive={router.pathname.includes('/projects')}
+               >
                   Projects
                </Navbar.Link>
             </NextLink>
