@@ -24,19 +24,23 @@ export const Projects = () => {
             {projects.map((project, index) => (
                <SectionAnimation
                   key={index}
-                  // delay={project.delay}
+                  delay={project.delay}
                   CSS={{
                      height: '100%',
                      borderRadius: '14px',
                      backgroundColor: 'transparent',
                   }}
                >
-                  <Link href={project.href}>
+                  <Link href={project.href} key={index}>
                      <Card
+                        isHoverable
                         isPressable
                         css={{
                            height: '100%',
                            display: 'block',
+                           backgroundColor: '$backgroundContrast',
+                           boxShadow: '$lg',
+                           filter: 'none',
                         }}
                      >
                         <Card.Body

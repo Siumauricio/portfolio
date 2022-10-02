@@ -47,7 +47,10 @@ const Index = ({project}: Props) => {
                align={'center'}
             >
                <NextLink href={'/projects'}>
-                  <Link css={{fontSize: '$xl'}} color={'primary'}>
+                  <Link
+                     css={{fontSize: '$xl', fontWeight: '$semibold'}}
+                     color={'primary'}
+                  >
                      Projects
                   </Link>
                </NextLink>
