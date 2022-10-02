@@ -10,7 +10,12 @@ interface Props {
 
 export const MainLayout = ({children}: Props) => {
    return (
-      <Box as="main">
+      <Box
+         as="main"
+         css={{
+            height: '100vh',
+         }}
+      >
          <Head>
             <meta
                name="viewport"
@@ -32,8 +37,17 @@ export const MainLayout = ({children}: Props) => {
          </Head>
 
          <NavbarWrapper />
-         {children}
-         <Footer />
+         <Box
+            css={{
+               height: '90%',
+               display: 'flex',
+               flexDirection: 'column',
+               justifyContent: 'space-between',
+            }}
+         >
+            {children}
+            <Footer />
+         </Box>
       </Box>
    );
 };
