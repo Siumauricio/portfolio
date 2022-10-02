@@ -64,7 +64,6 @@ const Index = ({project}: Props) => {
             <Text
                span
                css={{
-                  fontFamily: 'inherit',
                   display: 'block',
                }}
             >
