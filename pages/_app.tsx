@@ -1,9 +1,9 @@
-import '../styles/globals.css';
 import type {AppProps} from 'next/app';
 import {createTheme, NextUIProvider} from '@nextui-org/react';
 import {ThemeProvider as NextThemesProvider} from 'next-themes';
 import {AnimatePresence} from 'framer-motion';
 import {MainLayout} from '../components/layout/main-layout';
+import {globalStyles} from '../styles/global-styles';
 
 const lightTheme = createTheme({
    type: 'light',
@@ -24,6 +24,7 @@ if (typeof window !== 'undefined') {
 }
 
 function MyApp({Component, pageProps}: AppProps) {
+   globalStyles();
    return (
       <NextThemesProvider
          defaultTheme="system"
