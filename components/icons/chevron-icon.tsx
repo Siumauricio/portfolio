@@ -11,7 +11,7 @@ export const ChevronIcon = () => {
          xmlns="http://www.w3.org/2000/svg"
          css={{
             '& path': {
-               stroke: '$link',
+               stroke: '$primary',
             },
          }}
       >
