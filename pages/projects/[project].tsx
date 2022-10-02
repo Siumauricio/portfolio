@@ -99,7 +99,7 @@ const Index = ({project}: Props) => {
                href={project.preview}
                target="_blank"
             >
-               Live preview <LinkIcon />
+               Live preview <LinkIcon width={21} height={22} color="$primary" />
             </Link>
 
             <Link

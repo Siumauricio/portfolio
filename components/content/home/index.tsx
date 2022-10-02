@@ -1,5 +1,4 @@
 import {Text, Avatar, Card, Button, Link} from '@nextui-org/react';
-import {ChevronIcon} from '../../icons/chevron-icon';
 import {Box} from '../../styles/box';
 import {Flex} from '../../styles/flex';
 import {GithubIcon} from '../../icons/github-icon';
@@ -7,6 +6,7 @@ import {LinkedinIcon} from '../../icons/linkedin-icon';
 import {SectionAnimation} from '../../animations/section';
 import NextLink from 'next/link';
 import {useRouter} from 'next/router';
+import {LinkIcon} from '../../icons/link-icon';
 
 export const Home = () => {
    const router = useRouter();
@@ -58,13 +58,11 @@ export const Home = () => {
                </Text>
 
                <Flex justify={'center'} css={{mt: '$8'}}>
-                  <Button
-                     iconRight={<ChevronIcon />}
-                     css={{zIndex: '$1'}}
-                     onClick={() => router.push('/projects')}
-                  >
-                     My portfolio
-                  </Button>
+                  <NextLink href="/projects">
+                     <Link block css={{gap: '$4'}}>
+                        Projects <LinkIcon />
+                     </Link>
+                  </NextLink>
                </Flex>
             </Box>
          </SectionAnimation>
