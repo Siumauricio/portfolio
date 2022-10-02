@@ -1,7 +1,8 @@
 import React from 'react';
+import {ArticleLayout} from '../components/layout/article-layout';
 
 const Index = () => {
-   return <div>blog</div>;
+   return <ArticleLayout>blog</ArticleLayout>;
 };
 
 export default Index;
