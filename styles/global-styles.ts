@@ -5,7 +5,7 @@ export const globalStyles = globalCss({
       margin: 0,
       padding: 0,
       fontFamily: 'Inter, sans-serif',
-      backgroundColor: '$accents0',
+      // backgroundColor: '$accents0',
       transition: 'background-color 0.2s ease',
       // height: '100vh',
    },

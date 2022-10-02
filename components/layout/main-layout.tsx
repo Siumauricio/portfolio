@@ -13,7 +13,11 @@ export const MainLayout = ({children}: Props) => {
       <Box
          as="main"
          css={{
-            height: '100vh',
+            'height': '100vh',
+            'backgroundColor': '$accents0',
+            '& > *': {
+               fontFamily: 'inherit',
+            },
          }}
       >
          <Head>
