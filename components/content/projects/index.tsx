@@ -24,7 +24,7 @@ export const Projects = () => {
             {projects.map((project, index) => (
                <SectionAnimation
                   key={index}
-                  delay={project.delay}
+                  // delay={project.delay}
                   CSS={{
                      height: '100%',
                      borderRadius: '14px',

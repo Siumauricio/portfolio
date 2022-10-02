@@ -7,12 +7,13 @@ import {SectionAnimation} from '../../animations/section';
 import NextLink from 'next/link';
 import {useRouter} from 'next/router';
 import {LinkIcon} from '../../icons/link-icon';
+import {GridContainer} from '../../styles/grid';
 
 export const Home = () => {
    const router = useRouter();
 
    return (
-      <Box css={{'px': '$12', '@xsMax': {px: '$10'}}}>
+      <Box css={{'px': '$12', '@xsMax': {px: '$10'}, 'width': '100%'}}>
          <Card variant="flat" css={{marginBottom: '$10'}}>
             <Card.Body css={{backgroundColor: '$accents2'}}>
                <Text
@@ -110,6 +111,46 @@ export const Home = () => {
                   and I always try to learn something new every day, I love to
                   solve problems and I am always looking for new challenges.
                </Text>
+            </Box>
+         </SectionAnimation>
+
+         <SectionAnimation delay={0.3}>
+            <Box css={{mb: '$10'}}>
+               <Text h3>Skills</Text>
+               <GridContainer
+                  as={'ul'}
+                  gap={'md'}
+                  css={{
+                     'm': 0,
+                     'px': 0,
+                     'gridTemplateColumns': 'repeat(4, 1fr)',
+                     '@xsMax': {
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                     },
+                  }}
+               >
+                  <Box as={'li'}>ReactJS</Box>
+                  <Box as={'li'}>NextJS</Box>
+                  <Box as={'li'}>NodeJS</Box>
+                  <Box as={'li'}>NestJS</Box>
+                  <Box as={'li'}>TypeScript</Box>
+                  <Box as={'li'}>C# / .NET Core</Box>
+                  <Box as={'li'}>Git</Box>
+                  <Box as={'li'}>Git</Box>
+                  <Box as={'li'}>SQL</Box>
+                  <Box as={'li'}>Windows/Linux</Box>
+                  <Box as={'li'}>C++</Box>
+               </GridContainer>
+            </Box>
+         </SectionAnimation>
+
+         <SectionAnimation delay={0.3}>
+            <Box css={{mb: '$10'}}>
+               <Text h3>Languages</Text>
+               <GridContainer as={'ul'} gap={'md'} css={{m: 0, px: 0}}>
+                  <Box as={'li'}>Spanish - Native</Box>
+                  <Box as={'li'}>English - B1 </Box>
+               </GridContainer>
             </Box>
          </SectionAnimation>
 
