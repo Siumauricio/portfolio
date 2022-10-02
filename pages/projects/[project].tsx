@@ -47,7 +47,9 @@ const Index = ({project}: Props) => {
                align={'center'}
             >
                <NextLink href={'/projects'}>
-                  <Link css={{fontSize: '$xl'}}>Projects</Link>
+                  <Link css={{fontSize: '$xl'}} color={'primary'}>
+                     Projects
+                  </Link>
                </NextLink>
                <ChevronIcon />
                <Text
@@ -71,10 +73,9 @@ const Index = ({project}: Props) => {
             </Text>
             <Flex css={{gap: '$6'}} align={'center'}>
                <Badge
-                  css={{height: 'fit-content'}}
-                  variant="bordered"
+                  variant="flat"
                   color={'primary'}
-                  borderWeight={'normal'}
+                  css={{height: 'fit-content', border: 'none'}}
                >
                   Platform
                </Badge>
@@ -83,9 +84,9 @@ const Index = ({project}: Props) => {
 
             <Flex css={{gap: '$6'}} align={'center'}>
                <Badge
-                  variant="bordered"
+                  variant="flat"
                   color={'primary'}
-                  css={{height: 'fit-content'}}
+                  css={{height: 'fit-content', border: 'none'}}
                >
                   Stack
                </Badge>
