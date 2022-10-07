@@ -60,6 +60,18 @@ export const projects = [
       delay: 0.3,
    },
    {
+      title: 'Checkers Game',
+      description: `A traditional checkers game with drag and drop functionality.`,
+      img: '/Checkers.png',
+      href: '/projects/checkers',
+      preview: 'https://checkers-game-five.vercel.app/',
+      github: 'https://github.com/Siumauricio/checkers-game',
+      platform: 'Web',
+      stack: 'Typescript, Nextjs, Next UI.',
+      alt: 'Projects 1',
+      delay: 0.3,
+   },
+   {
       title: 'Lottery Random System with smart contracts',
       description: `Lottery system using blockchain system, that takes the money from the players and gives it to a random player.`,
       img: '/Lottery.png',
