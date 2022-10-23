@@ -87,8 +87,7 @@ export const Home = () => {
                         2018 - 2022
                      </Text>
                      <Text span>
-                        Almost complete Bachelor&apos;s degree in Computer
-                        Science.
+                        Bachelor&apos;s degree in Computer Science.
                      </Text>
                   </Box>
                   <Box as={'li'} css={{textIndent: '-3.4em', pl: '3.4em'}}>
