@@ -10,7 +10,7 @@ import {projects} from './utils';
 export const Projects = () => {
    return (
       <Box>
-         <Text h3 css={{'@xsMax': {textAlign: 'center'}}}>
+         <Text h2 css={{'@xsMax': {textAlign: 'center'}}}>
             Work
          </Text>
          <GridContainer
