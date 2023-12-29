@@ -96,7 +96,7 @@ export const Home = () => {
               <Text span css={{ mr: "1em" }} weight={"bold"}>
                 2022 - 2023
               </Text>
-              <Text span>Work as a Software Engineer at CodeExitos.</Text>
+              <Text span>Software Engineer at CodeExitos.</Text>
             </Box>
              <Box as={"li"} css={{ textIndent: "-3.4em", pl: "3.4em" }}>
               <Text span css={{ mr: "1em" }} weight={"bold"}>
