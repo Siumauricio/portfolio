@@ -142,6 +142,8 @@ export const Home = () => {
           >
             <Box as={"li"}>ReactJS</Box>
             <Box as={"li"}>NextJS</Box>
+             <Box as={"li"}>Graphql</Box>
+              <Box as={"li"}>React Native</Box>
             <Box as={"li"}>NodeJS</Box>
             <Box as={"li"}>NestJS</Box>
             <Box as={"li"}>TypeScript</Box>
