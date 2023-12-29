@@ -94,9 +94,21 @@ export const Home = () => {
             </Box>
             <Box as={"li"} css={{ textIndent: "-3.4em", pl: "3.4em" }}>
               <Text span css={{ mr: "1em" }} weight={"bold"}>
-                2022 - Present
+                2022 - 2023
               </Text>
               <Text span>Work as a Software Engineer at CodeExitos.</Text>
+            </Box>
+             <Box as={"li"} css={{ textIndent: "-3.4em", pl: "3.4em" }}>
+              <Text span css={{ mr: "1em" }} weight={"bold"}>
+                  2021 - Present
+              </Text>
+              <Text span>Middle Software Engineer At Jinza</Text>
+            </Box>
+              <Box as={"li"} css={{ textIndent: "-3.4em", pl: "3.4em" }}>
+              <Text span css={{ mr: "1em" }} weight={"bold"}>
+                  2023 - Present
+              </Text>
+              <Text span>Software Engineer At Trades.org</Text>
             </Box>
           </Box>
         </Box>
